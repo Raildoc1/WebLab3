@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="4819fd65-2272-4dfa-b9e0-99232e14393c" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1iajsUORbeO0ziTudE0N5Qw8wil" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="extract.method.default.visibility" value="private" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Test" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="chat.Main" />
+      <module name="WebLab3" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4819fd65-2272-4dfa-b9e0-99232e14393c" name="Default Changelist" comment="" />
+      <created>1602152803328</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1602152803328</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="552" y="202" key="#Inspections" timestamp="1602156090530">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="552" y="202" key="#Inspections/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1602156090530" />
+    <state x="686" y="209" key="#Test" timestamp="1602155749779">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="686" y="209" key="#Test/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1602155749779" />
+    <state x="414" y="199" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602155741519">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="414" y="199" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1602155741519" />
+    <state x="689" y="328" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1602155747110">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="689" y="328" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1602155747110" />
+    <state width="1877" height="295" key="GridCell.Tab.0.bottom" timestamp="1602156323977">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="295" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1602156323977" />
+    <state width="1877" height="295" key="GridCell.Tab.0.center" timestamp="1602156323977">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="295" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1602156323977" />
+    <state width="1877" height="295" key="GridCell.Tab.0.left" timestamp="1602156323977">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="295" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1602156323977" />
+    <state width="1877" height="295" key="GridCell.Tab.0.right" timestamp="1602156323977">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="295" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1602156323977" />
+    <state x="783" y="478" key="ReplaceDuplicatesPrompt" timestamp="1602153400130">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="783" y="478" key="ReplaceDuplicatesPrompt/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1602153400130" />
+    <state x="690" y="303" width="540" height="482" key="extract.method.dialog" timestamp="1602153396631">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="690" y="303" width="540" height="482" key="extract.method.dialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1602153396631" />
+  </component>
+</project>
