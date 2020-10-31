@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4819fd65-2272-4dfa-b9e0-99232e14393c" name="Default Changelist" comment="" />
+    <list default="true" id="4819fd65-2272-4dfa-b9e0-99232e14393c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/chat/ChatNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chat/ChatNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/chat/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chat/Main.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,6 +19,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1iajsUORbeO0ziTudE0N5Qw8wil" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -22,9 +30,26 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="extract.method.default.visibility" value="private" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.ChatNode2">
+    <configuration name="ChatNode1" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="chat.Main" />
+      <module name="WebLab3" />
+      <option name="PROGRAM_PARAMETERS" value="Dan 4000 30" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ChatNode2" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="chat.Main" />
+      <module name="WebLab3" />
+      <option name="PROGRAM_PARAMETERS" value="Sam 4001 40 127.0.0.1 4000" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Test" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="chat.Main" />
       <module name="WebLab3" />
@@ -32,6 +57,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.Test" />
+      <item itemvalue="Application.ChatNode1" />
+      <item itemvalue="Application.ChatNode2" />
+    </list>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -55,37 +85,53 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="686" y="209" key="#Test/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1602155749779" />
-    <state x="414" y="199" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602155741519">
+    <state x="255" y="243" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604142095731">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="414" y="199" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1602155741519" />
-    <state x="689" y="328" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1602155747110">
+    <state x="255" y="243" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604142095731" />
+    <state x="765" y="260" key="#com.intellij.ide.util.MemberChooser" timestamp="1604141114948">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="689" y="328" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1602155747110" />
-    <state width="1877" height="295" key="GridCell.Tab.0.bottom" timestamp="1602156323977">
+    <state x="765" y="260" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604141114948" />
+    <state x="689" y="328" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1604139192646">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="295" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1602156323977" />
-    <state width="1877" height="295" key="GridCell.Tab.0.center" timestamp="1602156323977">
+    <state x="689" y="328" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604139192646" />
+    <state x="371" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1604140028348">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="295" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1602156323977" />
-    <state width="1877" height="295" key="GridCell.Tab.0.left" timestamp="1602156323977">
+    <state x="371" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604140028348" />
+    <state width="1877" height="308" key="GridCell.Tab.0.bottom" timestamp="1604151066825">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="295" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1602156323977" />
-    <state width="1877" height="295" key="GridCell.Tab.0.right" timestamp="1602156323977">
+    <state width="1877" height="308" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604151066825" />
+    <state width="1877" height="308" key="GridCell.Tab.0.center" timestamp="1604151066825">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="295" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1602156323977" />
+    <state width="1877" height="308" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604151066825" />
+    <state width="1877" height="308" key="GridCell.Tab.0.left" timestamp="1604151066825">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="308" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604151066825" />
+    <state width="1877" height="308" key="GridCell.Tab.0.right" timestamp="1604151066825">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="308" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604151066825" />
     <state x="783" y="478" key="ReplaceDuplicatesPrompt" timestamp="1602153400130">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="783" y="478" key="ReplaceDuplicatesPrompt/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1602153400130" />
+    <state x="668" y="369" key="com.intellij.ide.util.TipDialog" timestamp="1604138821232">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="668" y="369" key="com.intellij.ide.util.TipDialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604138821232" />
     <state x="690" y="303" width="540" height="482" key="extract.method.dialog" timestamp="1602153396631">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="690" y="303" width="540" height="482" key="extract.method.dialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1602153396631" />
+    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1604142414277">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604142414277" />
   </component>
 </project>
