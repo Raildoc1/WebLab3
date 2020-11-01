@@ -186,9 +186,21 @@ public class ChatNode {
         System.out.println("CONN: " + address + " " + port);
         connections.add(new Connection(address, port));
 
-        if(!hasParent) return;
+        String altMessage;
 
-        String altMessage = "ALT:" + parentAddress.toString().substring(1) + ":" + parentPort + "::";
+        if(!hasParent) {
+
+            if(connections.size() < 2) return;
+
+            if(connections.get(0).address.equals(address) && connections.get(0).port == port) return;
+
+            altMessage = "ALT:" + connections.get(0).address.toString().substring(1) + ":" + connections.get(0).port + "::";
+
+        } else {
+
+            altMessage = "ALT:" + parentAddress.toString().substring(1) + ":" + parentPort + "::";
+
+        }
 
         DatagramPacket packet = new DatagramPacket(buf, buf.length, address, port);
         packet.setData(altMessage.getBytes());
@@ -219,6 +231,10 @@ public class ChatNode {
         DatagramPacket packet = new DatagramPacket(buf, buf.length, address, port);
         packet.setData(confMessage.getBytes());
         socket.send(packet);
+
+        System.out.println("SendMessageToAllNeighborsBut(" + port + ")");
+
+        SendMessageToAllNeighborsBut(MessageType.TXT, msg, address, port);
 
         System.out.println("MSG: " + msg);
     }
@@ -267,6 +283,38 @@ public class ChatNode {
 
     }
 
+    private void SendMessageToAllNeighborsBut(MessageType messageType, String msg, InetAddress address, int port) throws IOException {
+
+        msg = msg.replaceAll("\\:\\:", "[UNKNOWN_SYMBOL]");
+
+        msg = messageType + ":" + msg;
+
+        if(messageType == MessageType.TXT) {
+            UUID uuid = UUID.randomUUID();
+            msg +=  ":" + uuid.toString();
+
+            if(hasParent && ((!parentAddress.equals(address)) || (parentPort != port))) {
+                System.out.println(parentAddress + " != " + address);
+                System.out.println(parentPort + " != " + port);
+                pendingMessages.add(new PendingMessage(msg, uuid.toString(), new Connection(parentAddress, parentPort)));
+            }
+            if(!connections.isEmpty()) {
+                for (Connection c : connections) {
+                    if(c.address.equals(address) && (c.port == port)) continue;
+                    System.out.println(parentAddress + " != " + address);
+                    System.out.println(parentPort + " != " + port);
+                    pendingMessages.add(new PendingMessage(msg, uuid.toString(), new Connection(c.address, c.port)));
+                }
+            }
+        }
+
+        DatagramPacket packet;
+        msg += "::";
+
+        SendMessageToAllNeighborsBut(msg, address, port);
+
+    }
+
     private void SendMessageToAllNeighbors(String msg) throws IOException {
 
         DatagramPacket packet;
@@ -282,6 +330,36 @@ public class ChatNode {
         if(connections.isEmpty()) return;
 
         for (Connection c : connections) {
+            packet = new DatagramPacket(buf, buf.length, c.address, c.port);
+            System.out.println("Sending \"" + msg + "\" to " + c.address + ":" + c.port);
+            packet.setData(msg.getBytes());
+            socket.send(packet);
+        }
+    }
+
+    private void SendMessageToAllNeighborsBut(String msg, InetAddress address, int port) throws IOException {
+
+        DatagramPacket packet;
+        if(hasParent && ((!parentAddress.equals(address)) || (parentPort != port))){
+            System.out.println(parentAddress + " != " + address);
+            System.out.println(parentPort + " != " + port);
+            packet = new DatagramPacket(buf, buf.length, parentAddress, parentPort);
+
+            System.out.println("Sending \"" + msg + "\" to " + parentAddress + ":" + parentPort);
+
+            packet.setData(msg.getBytes());
+            socket.send(packet);
+        }
+
+        if(connections.isEmpty()) return;
+
+        for (Connection c : connections) {
+
+            if(c.address.equals(address) && (c.port == port)) continue;
+
+            System.out.println(parentAddress + " != " + address);
+            System.out.println(parentPort + " != " + port);
+
             packet = new DatagramPacket(buf, buf.length, c.address, c.port);
             System.out.println("Sending \"" + msg + "\" to" + c.address + ":" + c.port);
             packet.setData(msg.getBytes());
@@ -309,6 +387,12 @@ public class ChatNode {
 
                         msg.connection.port = parentPort;
                         msg.connection.address = parentAddress;
+
+                        msg.triesAmount = 0;
+                    } else {
+                        hasParent = false;
+                        pendingMessages.remove(msg);
+                        break;
                     }
                 } else {
                     System.out.println(msg.connection.port + " != " + parentPort);
@@ -320,6 +404,7 @@ public class ChatNode {
                         }
                     }
                     pendingMessages.remove(msg);
+                    break;
                 }
             }
         }

@@ -31,7 +31,15 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="extract.method.default.visibility" value="private" />
   </component>
-  <component name="RunManager" selected="Application.ChatNode3">
+  <component name="RunManager" selected="Application.ChatNode2">
+    <configuration name="ChatNode0" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="chat.Main" />
+      <module name="WebLab3" />
+      <option name="PROGRAM_PARAMETERS" value="Sam 4004 40 127.0.0.1 4000" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ChatNode1" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="chat.Main" />
       <module name="WebLab3" />
@@ -56,18 +64,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Test" type="Application" factoryName="Application">
+    <configuration name="ChatNode4" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="chat.Main" />
       <module name="WebLab3" />
+      <option name="PROGRAM_PARAMETERS" value="Tom 4003 70 127.0.0.1 4001" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Test" />
+      <item itemvalue="Application.ChatNode0" />
       <item itemvalue="Application.ChatNode1" />
       <item itemvalue="Application.ChatNode2" />
       <item itemvalue="Application.ChatNode3" />
+      <item itemvalue="Application.ChatNode4" />
     </list>
   </component>
   <component name="SvnConfiguration">
@@ -92,38 +102,38 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="686" y="209" key="#Test/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1602155749779" />
-    <state x="255" y="243" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604224265359">
+    <state x="255" y="243" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604229903509">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="255" y="243" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604224265359" />
+    <state x="255" y="243" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604229903509" />
     <state x="765" y="260" key="#com.intellij.ide.util.MemberChooser" timestamp="1604141114948">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="765" y="260" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604141114948" />
-    <state x="689" y="328" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1604224239408">
+    <state x="689" y="328" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1604229450486">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="689" y="328" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604224239408" />
+    <state x="689" y="328" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604229450486" />
     <state x="371" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1604140028348">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="371" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604140028348" />
-    <state width="1877" height="308" key="GridCell.Tab.0.bottom" timestamp="1604224880864">
+    <state width="1877" height="310" key="GridCell.Tab.0.bottom" timestamp="1604230589712">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="308" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604224880864" />
-    <state width="1877" height="308" key="GridCell.Tab.0.center" timestamp="1604224880864">
+    <state width="1877" height="310" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604230589712" />
+    <state width="1877" height="310" key="GridCell.Tab.0.center" timestamp="1604230589712">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="308" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604224880864" />
-    <state width="1877" height="308" key="GridCell.Tab.0.left" timestamp="1604224880864">
+    <state width="1877" height="310" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604230589712" />
+    <state width="1877" height="310" key="GridCell.Tab.0.left" timestamp="1604230589712">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="308" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604224880864" />
-    <state width="1877" height="308" key="GridCell.Tab.0.right" timestamp="1604224880864">
+    <state width="1877" height="310" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604230589712" />
+    <state width="1877" height="310" key="GridCell.Tab.0.right" timestamp="1604230589712">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="308" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604224880864" />
+    <state width="1877" height="310" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604230589712" />
     <state x="783" y="478" key="ReplaceDuplicatesPrompt" timestamp="1602153400130">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
