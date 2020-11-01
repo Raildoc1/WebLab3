@@ -121,10 +121,6 @@ public class ChatNode {
 
             if(!receivedMessage.contains("::")) return;
 
-            //int lastOccur = receivedMessage.lastIndexOf("::");
-
-            //receivedMessage = receivedMessage.substring(0, lastOccur);
-
             receivedMessage = receivedMessage.split("\\::")[0];
 
             String[] split = receivedMessage.split("\\:", 2);
@@ -156,15 +152,6 @@ public class ChatNode {
                     break;
             }
 
-
-            /*
-            packet.getData();
-
-            UUID uuid = UUID.randomUUID();
-            String confirmationMessage = name + " " + uuid.toString() + " " + split[1];
-
-            System.out.println(packet.getData());
-            */
         } catch (IOException e) { /*IGNORE*/ }
 
         try {
@@ -243,37 +230,11 @@ public class ChatNode {
         msg += "::";
 
         SendMessageToAllNeighbors(msg);
-/*
-        if(hasParent){
-            packet = new DatagramPacket(buf, buf.length, parentAddress, parentPort);
 
-            System.out.println("Sending \"" + msg + "\" to" + parentAddress + ":" + parentPort);
-
-            packet.setData(msg.getBytes());
-            socket.send(packet);
-        }
-
-        if(connections.isEmpty()) return;
-
-        for (Connection c : connections) {
-            packet = new DatagramPacket(buf, buf.length, c.address, c.port);
-            System.out.println("Sending \"" + msg + "\" to" + c.address + ":" + c.port);
-            packet.setData(msg.getBytes());
-            socket.send(packet);
-        }
-        */
     }
 
     private void SendMessageToAllNeighbors(String msg) throws IOException {
-/*
-        if(messageType == MessageType.TXT) {
-            UUID uuid = UUID.randomUUID();
-            pendingMessages.add(new PendingMessage(msg, uuid.toString()));
-            msg += ":" + uuid.toString();
-        }
-
-        msg = messageType + ":" + msg + "::";
-*/
+        
         DatagramPacket packet;
         if(hasParent){
             packet = new DatagramPacket(buf, buf.length, parentAddress, parentPort);
