@@ -31,15 +31,19 @@ public class ChatNode {
     private class PendingMessage {
         String msg;
         String uuid;
-        public PendingMessage(String msg, String uuid) {
+        Connection connection;
+        int triesAmount = 0;
+        public PendingMessage(String msg, String uuid, Connection connection) {
             this.msg = msg;
             this.uuid = uuid;
+            this.connection = connection;
         }
     }
 
     //<editor-fold desc="private fields">
     private static final int TIME_OUT_MILLIS = 1000;
     private static final int MAX_MSG_LENGTH = 256;
+    private static final int MAX_TRIES_AMOUNT = 5;
 
     // Node characteristics
     private String name;
@@ -53,6 +57,7 @@ public class ChatNode {
     private InetAddress parentAddress;
     private int alternativeParentPort;
     private InetAddress alternativeParentAddress;
+    private boolean hasAlternative = false;
     private ArrayList<Connection> connections;
 
     // Other
@@ -132,7 +137,7 @@ public class ChatNode {
             switch (messageType) {
                 case CONF:
                     System.out.println("CONF: " + receivedMessage);
-                    HandleConfirmationMessage(receivedMessage);
+                    HandleConfirmationMessage(receivedMessage, packet.getAddress(), packet.getPort());
                     break;
                 case TXT:
                     Double rand = random.nextDouble();
@@ -141,8 +146,7 @@ public class ChatNode {
                     HandleMessage(receivedMessage, packet.getAddress(), packet.getPort());
                     break;
                 case CONN:
-                    System.out.println("CONN: " + packet.getAddress() + " " + Integer.parseInt(receivedMessage));
-                    connections.add(new Connection(packet.getAddress(), Integer.parseInt(receivedMessage)));
+                    HandleConnectionRequest(receivedMessage, packet.getAddress());
                     break;
                 case ALT:
                     fillAlternativeNodeAddress(receivedMessage);
@@ -175,11 +179,28 @@ public class ChatNode {
         }
     }
 
-    private void HandleConfirmationMessage(String receivedMessage) {
+    private void HandleConnectionRequest(String receivedMessage, InetAddress address) throws IOException {
+
+        int port = Integer.parseInt(receivedMessage);
+
+        System.out.println("CONN: " + address + " " + port);
+        connections.add(new Connection(address, port));
+
+        if(!hasParent) return;
+
+        String altMessage = "ALT:" + parentAddress.toString().substring(1) + ":" + parentPort + "::";
+
+        DatagramPacket packet = new DatagramPacket(buf, buf.length, address, port);
+        packet.setData(altMessage.getBytes());
+        socket.send(packet);
+
+    }
+
+    private void HandleConfirmationMessage(String receivedMessage, InetAddress address, int port) {
         int uuidIndex = receivedMessage.lastIndexOf(":");
         String uuid = receivedMessage.substring(uuidIndex + 1);
         for (PendingMessage msg: pendingMessages) {
-            if(msg.uuid.equals(uuid)) {
+            if(msg.uuid.equals(uuid) && msg.connection.address.equals(address) && (msg.connection.port == port)) {
                 pendingMessages.remove(msg);
                 break;
             }
@@ -203,6 +224,11 @@ public class ChatNode {
     }
 
     private void fillAlternativeNodeAddress(String receivedMessage) throws UnknownHostException {
+
+        hasAlternative = true;
+
+        System.out.println("ALT: " + receivedMessage);
+
         String[] split;
         split = receivedMessage.split("\\:");
         alternativeParentPort = Integer.parseInt(split[1]);
@@ -223,7 +249,15 @@ public class ChatNode {
         if(messageType == MessageType.TXT) {
             UUID uuid = UUID.randomUUID();
             msg +=  ":" + uuid.toString();
-            pendingMessages.add(new PendingMessage(msg, uuid.toString()));
+
+            if(hasParent) {
+                pendingMessages.add(new PendingMessage(msg, uuid.toString(), new Connection(parentAddress, parentPort)));
+            }
+            if(!connections.isEmpty()) {
+                for (Connection c : connections) {
+                    pendingMessages.add(new PendingMessage(msg, uuid.toString(), new Connection(c.address, c.port)));
+                }
+            }
         }
 
         DatagramPacket packet;
@@ -234,7 +268,7 @@ public class ChatNode {
     }
 
     private void SendMessageToAllNeighbors(String msg) throws IOException {
-        
+
         DatagramPacket packet;
         if(hasParent){
             packet = new DatagramPacket(buf, buf.length, parentAddress, parentPort);
@@ -259,7 +293,35 @@ public class ChatNode {
         if(pendingMessages.isEmpty()) return;
 
         for (PendingMessage msg : pendingMessages) {
-            SendMessageToAllNeighbors(msg.msg + "::");
+            //SendMessageToAllNeighbors(msg.msg + "::");
+            DatagramPacket packet = new DatagramPacket(buf, buf.length, msg.connection.address, msg.connection.port);
+            packet.setData((msg.msg + "::").getBytes());
+            socket.send(packet);
+            System.out.println("Resending \"" + msg.msg + "::" + "\" to " + parentAddress + ":" + parentPort + " " + (msg.triesAmount + 1) + " of " + MAX_TRIES_AMOUNT);
+            if(++(msg.triesAmount) > MAX_TRIES_AMOUNT) {
+                if(msg.connection.port == parentPort && msg.connection.address.equals(parentAddress)) {
+                    System.out.println("hasAlternative = " + hasAlternative);
+                    if(hasAlternative) {
+                        parentAddress = alternativeParentAddress;
+                        parentPort = alternativeParentPort;
+                        hasAlternative = false;
+                        SendParentConnectionRequest();
+
+                        msg.connection.port = parentPort;
+                        msg.connection.address = parentAddress;
+                    }
+                } else {
+                    System.out.println(msg.connection.port + " != " + parentPort);
+                    System.out.println(msg.connection.address + " != " + parentAddress);
+                    for (Connection c : connections ) {
+                        if(c.address.equals(msg.connection.address) && (c.port == msg.connection.port)) {
+                            connections.remove(c);
+                            break;
+                        }
+                    }
+                    pendingMessages.remove(msg);
+                }
+            }
         }
     }
 
