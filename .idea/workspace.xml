@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4819fd65-2272-4dfa-b9e0-99232e14393c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/chat/ChatNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chat/ChatNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chat/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chat/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,34 +99,34 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="371" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604140028348" />
-    <state width="1877" height="308" key="GridCell.Tab.0.bottom" timestamp="1604151066825">
+    <state width="1877" height="308" key="GridCell.Tab.0.bottom" timestamp="1604215956550">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="308" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604151066825" />
-    <state width="1877" height="308" key="GridCell.Tab.0.center" timestamp="1604151066825">
+    <state width="1877" height="308" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604215956550" />
+    <state width="1877" height="308" key="GridCell.Tab.0.center" timestamp="1604215956549">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="308" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604151066825" />
-    <state width="1877" height="308" key="GridCell.Tab.0.left" timestamp="1604151066825">
+    <state width="1877" height="308" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604215956549" />
+    <state width="1877" height="308" key="GridCell.Tab.0.left" timestamp="1604215956549">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="308" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604151066825" />
-    <state width="1877" height="308" key="GridCell.Tab.0.right" timestamp="1604151066825">
+    <state width="1877" height="308" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604215956549" />
+    <state width="1877" height="308" key="GridCell.Tab.0.right" timestamp="1604215956549">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="308" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604151066825" />
+    <state width="1877" height="308" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604215956549" />
     <state x="783" y="478" key="ReplaceDuplicatesPrompt" timestamp="1602153400130">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="783" y="478" key="ReplaceDuplicatesPrompt/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1602153400130" />
-    <state x="668" y="369" key="com.intellij.ide.util.TipDialog" timestamp="1604138821232">
+    <state x="668" y="369" key="com.intellij.ide.util.TipDialog" timestamp="1604208586011">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="668" y="369" key="com.intellij.ide.util.TipDialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604138821232" />
-    <state x="690" y="303" width="540" height="482" key="extract.method.dialog" timestamp="1602153396631">
+    <state x="668" y="369" key="com.intellij.ide.util.TipDialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604208586011" />
+    <state x="690" y="303" width="540" height="482" key="extract.method.dialog" timestamp="1604214544121">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="690" y="303" width="540" height="482" key="extract.method.dialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1602153396631" />
+    <state x="690" y="303" width="540" height="482" key="extract.method.dialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604214544121" />
     <state x="623" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1604142414277">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
