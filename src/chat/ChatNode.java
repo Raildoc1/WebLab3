@@ -172,6 +172,8 @@ public class ChatNode {
                 return;
             }
 
+            msg = name + ": " + msg;
+
             SendMessageToAllNeighbors(MessageType.TXT, msg);
 
         } catch (IOException e) {
@@ -236,7 +238,7 @@ public class ChatNode {
 
         SendMessageToAllNeighborsBut(MessageType.TXT, msg, address, port);
 
-        System.out.println("MSG: " + msg);
+        System.out.println(msg);
     }
 
     private void fillAlternativeNodeAddress(String receivedMessage) throws UnknownHostException {
@@ -341,8 +343,6 @@ public class ChatNode {
 
         DatagramPacket packet;
         if(hasParent && ((!parentAddress.equals(address)) || (parentPort != port))){
-            System.out.println(parentAddress + " != " + address);
-            System.out.println(parentPort + " != " + port);
             packet = new DatagramPacket(buf, buf.length, parentAddress, parentPort);
 
             System.out.println("Sending \"" + msg + "\" to " + parentAddress + ":" + parentPort);
@@ -356,9 +356,6 @@ public class ChatNode {
         for (Connection c : connections) {
 
             if(c.address.equals(address) && (c.port == port)) continue;
-
-            System.out.println(parentAddress + " != " + address);
-            System.out.println(parentPort + " != " + port);
 
             packet = new DatagramPacket(buf, buf.length, c.address, c.port);
             System.out.println("Sending \"" + msg + "\" to" + c.address + ":" + c.port);
@@ -395,8 +392,6 @@ public class ChatNode {
                         break;
                     }
                 } else {
-                    System.out.println(msg.connection.port + " != " + parentPort);
-                    System.out.println(msg.connection.address + " != " + parentAddress);
                     for (Connection c : connections ) {
                         if(c.address.equals(msg.connection.address) && (c.port == msg.connection.port)) {
                             connections.remove(c);
