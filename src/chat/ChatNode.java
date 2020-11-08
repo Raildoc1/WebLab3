@@ -16,7 +16,8 @@ public class ChatNode {
         CONF, // confirmation
         TXT, // text message
         CONN, // connection request
-        ALT // alternative node address
+        ALT, // alternative node address
+        RETXT // resend text message
     }
 
     private class Connection {
@@ -82,7 +83,7 @@ public class ChatNode {
 
         initSocket(port);
         initLossChance(lossChance);
-        SendParentConnectionRequest();
+        //SendParentConnectionRequest();
 
     }
 
@@ -134,19 +135,26 @@ public class ChatNode {
 
             receivedMessage = split[1];
 
+            Double rand = random.nextDouble();
+
             switch (messageType) {
                 case CONF:
                     System.out.println("CONF: " + receivedMessage);
                     HandleConfirmationMessage(receivedMessage, packet.getAddress(), packet.getPort());
                     break;
                 case TXT:
-                    Double rand = random.nextDouble();
-                    //System.out.println(rand + "<" + lossChance);
+                    if(!FindConnection(packet.getPort(), packet.getAddress())){
+                        HandleConnectionRequest(packet.getPort(), packet.getAddress());
+                    }
+                    if(rand < lossChance) break;
+                    HandleMessage(receivedMessage, packet.getAddress(), packet.getPort());
+                    break;
+                case RETXT:
                     if(rand < lossChance) break;
                     HandleMessage(receivedMessage, packet.getAddress(), packet.getPort());
                     break;
                 case CONN:
-                    HandleConnectionRequest(receivedMessage, packet.getAddress());
+                    HandleConnectionRequest(packet.getPort(), packet.getAddress());
                     break;
                 case ALT:
                     fillAlternativeNodeAddress(receivedMessage);
@@ -181,9 +189,26 @@ public class ChatNode {
         }
     }
 
-    private void HandleConnectionRequest(String receivedMessage, InetAddress address) throws IOException {
 
-        int port = Integer.parseInt(receivedMessage);
+    private boolean FindConnection(int port, InetAddress address) {
+
+        if(hasParent){
+            if(parentPort == port && parentAddress.equals(address)) {
+                return true;
+            }
+        }
+
+        for (Connection c : connections) {
+            if(c.port == port && c.address.equals(address)){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private void HandleConnectionRequest(int port, InetAddress address) throws IOException {
+
+        //int port = Integer.parseInt(receivedMessage);
 
         System.out.println("CONN: " + address + " " + port);
         connections.add(new Connection(address, port));
@@ -236,7 +261,7 @@ public class ChatNode {
 
         System.out.println("SendMessageToAllNeighborsBut(" + port + ")");
 
-        SendMessageToAllNeighborsBut(MessageType.TXT, msg, address, port);
+        SendMessageToAllNeighborsBut(MessageType.RETXT, msg, address, port);
 
         System.out.println(msg);
     }
@@ -291,7 +316,7 @@ public class ChatNode {
 
         msg = messageType + ":" + msg;
 
-        if(messageType == MessageType.TXT) {
+        if(messageType == MessageType.TXT || messageType == MessageType.RETXT) {
             UUID uuid = UUID.randomUUID();
             msg +=  ":" + uuid.toString();
 

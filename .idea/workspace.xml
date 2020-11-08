@@ -31,11 +31,11 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="extract.method.default.visibility" value="private" />
   </component>
-  <component name="RunManager" selected="Application.ChatNode0">
+  <component name="RunManager" selected="Application.ChatNode2">
     <configuration name="ChatNode0" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="chat.Main" />
       <module name="WebLab3" />
-      <option name="PROGRAM_PARAMETERS" value="Sam 4004 40 127.0.0.1 4000" />
+      <option name="PROGRAM_PARAMETERS" value="Kate 4004 40 127.0.0.1 4000" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -67,7 +67,7 @@
     <configuration name="ChatNode4" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="chat.Main" />
       <module name="WebLab3" />
-      <option name="PROGRAM_PARAMETERS" value="Tom 4003 70 127.0.0.1 4001" />
+      <option name="PROGRAM_PARAMETERS" value="Olga 4003 70 127.0.0.1 4001" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -102,10 +102,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="686" y="209" key="#Test/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1602155749779" />
-    <state x="255" y="243" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604229903509">
+    <state x="255" y="243" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604860307078">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="255" y="243" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604229903509" />
+    <state x="255" y="243" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604860307078" />
     <state x="765" y="260" key="#com.intellij.ide.util.MemberChooser" timestamp="1604141114948">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -118,30 +118,30 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="371" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604140028348" />
-    <state width="1877" height="310" key="GridCell.Tab.0.bottom" timestamp="1604230945890">
+    <state width="1877" height="404" key="GridCell.Tab.0.bottom" timestamp="1604860546275">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="310" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604230945890" />
-    <state width="1877" height="310" key="GridCell.Tab.0.center" timestamp="1604230945890">
+    <state width="1877" height="404" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604860546275" />
+    <state width="1877" height="404" key="GridCell.Tab.0.center" timestamp="1604860546275">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="310" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604230945890" />
-    <state width="1877" height="310" key="GridCell.Tab.0.left" timestamp="1604230945890">
+    <state width="1877" height="404" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604860546275" />
+    <state width="1877" height="404" key="GridCell.Tab.0.left" timestamp="1604860546275">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="310" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604230945890" />
-    <state width="1877" height="310" key="GridCell.Tab.0.right" timestamp="1604230945890">
+    <state width="1877" height="404" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604860546275" />
+    <state width="1877" height="404" key="GridCell.Tab.0.right" timestamp="1604860546275">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="310" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604230945890" />
+    <state width="1877" height="404" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604860546275" />
     <state x="783" y="478" key="ReplaceDuplicatesPrompt" timestamp="1602153400130">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="783" y="478" key="ReplaceDuplicatesPrompt/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1602153400130" />
-    <state x="668" y="369" key="com.intellij.ide.util.TipDialog" timestamp="1604208586011">
+    <state x="668" y="369" key="com.intellij.ide.util.TipDialog" timestamp="1604859515389">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="668" y="369" key="com.intellij.ide.util.TipDialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604208586011" />
+    <state x="668" y="369" key="com.intellij.ide.util.TipDialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604859515389" />
     <state x="690" y="303" width="540" height="482" key="extract.method.dialog" timestamp="1604223980501">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
