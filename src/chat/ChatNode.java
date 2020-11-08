@@ -433,6 +433,7 @@ public class ChatNode {
     }
 
     public void stop() {
+        scanner.close();
         socket.disconnect();
         socket.close();
         pendingMessages.clear();
