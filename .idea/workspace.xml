@@ -31,7 +31,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="extract.method.default.visibility" value="private" />
   </component>
-  <component name="RunManager" selected="Application.ChatNode2">
+  <component name="RunManager" selected="Application.ChatNode1">
     <configuration name="ChatNode0" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="chat.Main" />
       <module name="WebLab3" />
@@ -118,22 +118,22 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="371" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604140028348" />
-    <state width="1877" height="404" key="GridCell.Tab.0.bottom" timestamp="1604860546275">
+    <state width="1877" height="404" key="GridCell.Tab.0.bottom" timestamp="1604860878043">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="404" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604860546275" />
-    <state width="1877" height="404" key="GridCell.Tab.0.center" timestamp="1604860546275">
+    <state width="1877" height="404" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604860878043" />
+    <state width="1877" height="404" key="GridCell.Tab.0.center" timestamp="1604860878043">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="404" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604860546275" />
-    <state width="1877" height="404" key="GridCell.Tab.0.left" timestamp="1604860546275">
+    <state width="1877" height="404" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604860878043" />
+    <state width="1877" height="404" key="GridCell.Tab.0.left" timestamp="1604860878043">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="404" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604860546275" />
-    <state width="1877" height="404" key="GridCell.Tab.0.right" timestamp="1604860546275">
+    <state width="1877" height="404" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604860878043" />
+    <state width="1877" height="404" key="GridCell.Tab.0.right" timestamp="1604860878043">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="404" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604860546275" />
+    <state width="1877" height="404" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604860878043" />
     <state x="783" y="478" key="ReplaceDuplicatesPrompt" timestamp="1602153400130">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>

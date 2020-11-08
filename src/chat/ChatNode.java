@@ -431,7 +431,10 @@ public class ChatNode {
     }
 
     public void stop() {
+        socket.disconnect();
         socket.close();
+        pendingMessages.clear();
+        connections.clear();
         isStopped = true;
     }
 
