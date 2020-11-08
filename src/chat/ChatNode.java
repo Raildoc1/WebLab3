@@ -186,6 +186,8 @@ public class ChatNode {
 
         } catch (IOException e) {
             System.out.println("Failed to read from stdin!");
+            stop();
+            return;
         }
     }
 
